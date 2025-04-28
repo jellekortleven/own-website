@@ -1,0 +1,168 @@
+
+/* General settings for body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a23;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+/* Hero section settings (top intro part) */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../assets/home_banner_it.jpg') no-repeat center center/cover;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 3s ease-in;
+  position: relative;
+  z-index: 1;
+}
+
+/* Button inside Hero */
+.hero .btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #00c3ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+/* Button hover effect */
+.hero .btn:hover {
+  background: #0095cc;
+}
+
+/* General section settings */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Grid for project cards */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual project card */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Project card hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00c3ff;
+}
+
+/* Images inside project cards */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Title and paragraph inside cards */
+.card h3,
+.card p {
+  margin: 10px;
+}
+
+/* Button inside cards */
+.card .btn {
+  margin: 10px;
+  background: #00c3ff;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* Skills section bars */
+.skills-section .skill-bar {
+  background: #333;
+  border-radius: 20px;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
+
+/* Skill filling bar */
+.skills-section .skill-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: var(--percentage);
+  transition: width 2s ease;
+  background-color: var(--color, #4caf50);
+}
+
+/* Color coding skill levels */
+.skills-section .skill-bar[data-skill="low"]::after {
+  background-color: #ff4d4d;
+}
+.skills-section .skill-bar[data-skill="medium"]::after {
+  background-color: #ffcc00;
+}
+.skills-section .skill-bar[data-skill="high"]::after {
+  background-color: #4caf50;
+}
+
+/* Contact form settings */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs and textarea styling */
+.contact-section input,
+.contact-section textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #111;
+  color: #eee;
+}
+
+/* Submit button styling */
+.contact-section button {
+  background: #00c3ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+}
+
+/* Footer settings */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
